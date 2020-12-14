@@ -56,4 +56,37 @@ print(i3.kilo)
 print(i3.bki_hesapla())
 
 # del i3
+# %% veri gizleme/kapsülleme (encapsulation)
+# public nesneden erişilebilir
+# private sadece sınıf içinden erişilebilir.
+class Hayvan:
+    def __init__(self,r,kl,by):
+        self.__kilo=kl#private
+        self.__boy=by#private
+        self.renk=r#public
+    # get ve set methodları
+    def setKilo(self,k):
+        if k>0:
+            self.__kilo=k        
+    
+    def getKilo(self):
+        return self.__kilo
+    def setBoy(self,b):
+        if k>0:
+            self.__boy=b        
+    
+    def getBoy(self):
+        return self.__boy
+  
+
+
+h1=Hayvan("sarı",10,.2)#init methodu var yapıcı method
+h2=Hayvan("kırmızı",10,.2)#init methodu var yapıcı method
+h3=Hayvan("turuncu",10,.2)#init methodu var yapıcı method
+print(h1.renk)
+print(h2.getBoy())
+print(h3.getKilo())
+
+h1.setKilo(-5)
+print(h1.getKilo())
 # %%
