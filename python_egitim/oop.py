@@ -89,4 +89,68 @@ print(h3.getKilo())
 
 h1.setKilo(-5)
 print(h1.getKilo())
+# %% miras kavramı
+# public olan özellik ve davranışlar miras verilir.
+# private olanlar miras verilmez
+class Hayvan:
+    def __init__(self):
+        print("hayvan yapıcı method")
+        self.isim="Hayvan"
+        self.__miras="miras alamazsın"
+    def beslen(self):
+        print(self.isim," besleniyor.")
+    def hareket_et(self):
+        print(self.isim," hareket ediyor.")
+    def ses_cikar(self):
+        print("Hayvan sınıfı ses çıkar mehodu")
+
+class Kedi(Hayvan):
+    def __init__(self,ad):
+        # super().__init__()
+        print("kedi yapıcım method")
+        self.isim=ad
+    def beslen(self):#method ezme yani ata sınftaki method ezilir.
+        print("ben ata sınıftan geen methodu ezdim")
+    def ses_cikar(self):
+        print("miyav")
+
+class Kopek(Hayvan):
+    def __init__(self,ad):
+        # super().__init__()
+        print("Köpek yapıcım method")
+        self.isim=ad
+    def beslen(self):
+        print("ben ata sınıftan geen methodu ezdim")
+    def ses_cikar(self):
+        print("hav hav")   
+class Kus(Hayvan):
+    pass
+kd1 = Kedi("tekir")
+kp1= Kopek("karabaş")
+ks1 = Kus()
+
+#çok biçimlilik
+kd1.ses_cikar()
+kp1.ses_cikar()
+
 # %%
+#soyutlama
+l=[]
+def ses_cikar(nesne):
+    if  isinstance(nesne,Hayvan) :
+        nesne.ses_cikar()
+
+ses_cikar(kd1)
+ses_cikar(kp1)
+ses_cikar(ks1)
+ses_cikar(l)
+
+# %% # %%
+# hayali araba
+
+# arabanın özellikler
+# marka, model yılı, renk, kaç km de
+# arabanın davranışları
+# git(km) bu değer sürekli kaçkm de değişkenine eklensin
+#arabayı_boya(renk)
+#model yılı private olsun 
