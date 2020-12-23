@@ -1,5 +1,13 @@
-def daire_alani(r):
-    alan=3*r*r
-    return alan#return 3*r*r
+# operatörler operand a + b
 
-daire_alani(5)
+a = 5
+b = 8
+print(a+20.0+b)
+
+c = "hasan"
+d = "ali"
+print(c+"20"+d)
+
+sol = [23, 5, 8]
+sag = [58, 36]
+print(sol+[33]+sag)
