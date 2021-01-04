@@ -1,5 +1,3 @@
-
-from __future__ import print_function
 import cv2,os
 import  numpy as np
 
