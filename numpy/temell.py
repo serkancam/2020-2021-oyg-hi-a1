@@ -108,12 +108,12 @@ print("\n",ndl0[1:3,2:4])#8-9-13-14
 # %%
 # print(np.linspace(1,20,20,dtype=np.uint8))
 # %% zeros() ones() full()
-a = np.zeros((3,3),dtype=np.float64)
+a = np.zeros((3,3,3),dtype=np.float64)
 print(a)
-b= np.zeros((3,3),dtype=np.str_)
-print(b)
-c = np.zeros((3,3),dtype=np.uint8)
-print(c)
+# b= np.zeros((3,3),dtype=np.str_)
+# print(b)
+# c = np.zeros((3,3),dtype=np.uint8)
+# print(c)
 
 # %%
 a = np.ones((3,3),dtype=np.float64)
