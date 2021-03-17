@@ -20,7 +20,7 @@ resim_degisik=resim.copy()
 resim_degisik[0:100,0:200]=resim_degisik[300:400,200:400]
 cv2.rectangle(resim_degisik,(0,0),(200,100),(0,255,0),3)
 # resim satır ve sutunların yarısını yok edelim
-resim_kucuk = resim[::,::2]
+resim_kucuk = resim[::2,::2]
 cv2.imwrite("degisik.jpg",resim_degisik)
 cv2.imshow("değişik resim",resim_degisik)
 cv2.imshow("kucuk resim",resim_kucuk)
