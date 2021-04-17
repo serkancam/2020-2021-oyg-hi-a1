@@ -1,2 +1,6 @@
 
 python_egitim/test.py
+
+*.csv
+
+*.exe
